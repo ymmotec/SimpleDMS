@@ -10,4 +10,4 @@ def index(request):
     departments_list = Department.objects.all()
     context = { 'departments_list' : departments_list}
 
-    return render(request, context=context, template_name='index')
+    return render(request, 'dms/index.html', context)
