@@ -1,0 +1,9 @@
+{% if departments_list %}
+    <ul>
+        {% for department in departments_list %}
+            <li>{{ department.name }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Brak działów do wyświetlenia</p>
+{% endif %}
