@@ -1,7 +1,7 @@
 {% if departments_list %}
     <ul>
         {% for department in departments_list %}
-            <li>{{ department.name }}</li>
+            <li><a href="{% url 'dms:department_details_path' department.id %}" >{{department.name }}</a> </li>
         {% endfor %}
     </ul>
 {% else %}
