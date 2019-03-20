@@ -42,6 +42,8 @@ class Document(models.Model):
     title = models.CharField(verbose_name='Tytuł dokumentu', max_length=300)
     document_number = models.CharField(verbose_name="Numer dokumentu/procedury", max_length=50)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    product = models.ManyToManyField(Product)
+    department = models.ManyToManyField(Department)
 
     def __str__(self):
         return f"{self.document_number} - {self.title}"
