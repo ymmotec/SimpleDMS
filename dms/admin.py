@@ -14,4 +14,5 @@ class DocumentAdmin(admin.ModelAdmin):
 
 #admin.site.register(Department)
 admin.site.register(Category)
-admin.site.register(Document)
+admin.site.register(Document, DocumentAdmin)
+#admin.site.register(Document)
