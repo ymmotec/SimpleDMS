@@ -12,7 +12,7 @@ class DocumentAdmin(admin.ModelAdmin):
 
     filter_horizontal = ['product', 'department']
 
-#admin.site.register(Department)
+admin.site.register(Department)
 admin.site.register(Category)
 admin.site.register(Document, DocumentAdmin)
 #admin.site.register(Document)
