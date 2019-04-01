@@ -41,7 +41,12 @@ class Document(models.Model):
     '''Published document'''
     title = models.CharField(verbose_name='Tytuł dokumentu', max_length=300)
     document_number = models.CharField(verbose_name="Numer dokumentu/procedury", max_length=50)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Kategoria')
+    product = models.ManyToManyField(Product, verbose_name='Produkty', blank=True)
+    department = models.ManyToManyField(Department, verbose_name="Działy", blank=True)
 
     def __str__(self):
         return f"{self.document_number} - {self.title}"
+
+    class Meta:
+        verbose_name_plural = 'Dokumenty'
