@@ -10,6 +10,7 @@ class Category(models.Model):
         return self.name
 
     class Meta:
+        verbose_name = 'Kategoria'
         verbose_name_plural = 'Kategorie'
 
 
@@ -22,6 +23,7 @@ class Department(models.Model):
         return self.name
 
     class Meta:
+        verbose_name = "Dział"
         verbose_name_plural = 'Działy'
 
 
@@ -34,6 +36,7 @@ class Product(models.Model):
         return self.name
 
     class Meta:
+        verbose_name = 'Produkt'
         verbose_name_plural = 'Produkty'
 
 
@@ -49,4 +52,5 @@ class Document(models.Model):
         return f"{self.document_number} - {self.title}"
 
     class Meta:
+        verbose_name = 'Dokument'
         verbose_name_plural = 'Dokumenty'
