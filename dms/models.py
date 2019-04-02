@@ -10,6 +10,7 @@ class Category(models.Model):
         return self.name
 
     class Meta:
+        verbose_name = 'Kategoria'
         verbose_name_plural = 'Kategorie'
 
 
