@@ -23,6 +23,7 @@ class Department(models.Model):
         return self.name
 
     class Meta:
+        verbose_name = "Dział"
         verbose_name_plural = 'Działy'
 
 
