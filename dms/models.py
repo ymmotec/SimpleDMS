@@ -52,4 +52,5 @@ class Document(models.Model):
         return f"{self.document_number} - {self.title}"
 
     class Meta:
+        verbose_name = 'Dokument'
         verbose_name_plural = 'Dokumenty'
