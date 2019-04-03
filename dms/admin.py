@@ -5,6 +5,7 @@ from .models import Department, Category, Document
 class DocumentAdmin(admin.ModelAdmin):
     fields = (
         ('title', 'document_number'),
+        'document_file',
         'category',
         'product',
         'department'
