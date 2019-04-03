@@ -3,11 +3,21 @@
 
 {% block content %}
 {% if departments_list %}
-    <ul>
-        {% for department in departments_list %}
-            <li><a href="{% url 'dms:department_details_path' department.id %}" >{{department.name }}</a> </li>
-        {% endfor %}
-    </ul>
+<!-- <div class="card-deck mb-3">-->
+<div class="row">
+    {% for department in departments_list %}
+            <div class="col-sm-xs mx-3">
+            <div class="card border-primary my-1" style="width: 20rem;">
+              <div class="card-body">
+                <h5 class="card-title">{{ department.name }}</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="{% url 'dms:department_details_path' department.id %}" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+            </div>
+
+    {% endfor %}
+</div>
 {% else %}
     <p>Brak działów do wyświetlenia</p>
 {% endif %}
