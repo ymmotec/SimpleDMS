@@ -47,6 +47,7 @@ class Document(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Kategoria')
     product = models.ManyToManyField(Product, verbose_name='Produkty', blank=True)
     department = models.ManyToManyField(Department, verbose_name="Działy", blank=True)
+    document_file = models.FileField(verbose_name="Plik dokumentu")
 
     def __str__(self):
         return f"{self.document_number} - {self.title}"
