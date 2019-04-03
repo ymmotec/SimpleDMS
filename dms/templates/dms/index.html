@@ -1,3 +1,7 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
 {% if departments_list %}
     <ul>
         {% for department in departments_list %}
@@ -7,3 +11,4 @@
 {% else %}
     <p>Brak działów do wyświetlenia</p>
 {% endif %}
+{% endblock content %}
