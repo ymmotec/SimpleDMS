@@ -55,3 +55,17 @@ class Document(models.Model):
     class Meta:
         verbose_name = 'Dokument'
         verbose_name_plural = 'Dokumenty'
+
+
+
+class Formular(models.Model):
+    name = models.CharField(verbose_name="Tytuł formularza", max_length=150)
+    #file_url = models.CharField(verbose_name="Adres pliku")
+    test = models.FilePathField(path='/Users/tgaladyk/Documents/ML/')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Formularz'
+        verbose_name_plural = "Formularze"
